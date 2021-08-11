@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="assets/Icons-Land-Medical-Equipment-Capsule-Red.ico">
+
+
+    <!-- ======= Style ======= -->
+    <link rel="stylesheet" href="assets/bootstrap-4.6.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/Style/style.css">
+    <link rel="stylesheet" href="assets/Style/qrcode.css">
+    <link rel="stylesheet" href="css/loader-1.css">
+
+    <title>Drug Label</title>
+    
+</head>
+<body >
+    <div class="d-flex justify-content-center">
+        <div class="spinner-grow text-primary" id="loader" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    
+    <div style="display:none;" id="myDiv" class="animate-bottom">
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <div class="logo">
+                    <img src="../assets/logo.png">
+                </div>
+                <button class="navbar-toggler"
+                    type="button" 
+                    data-toggle="collapse" 
+                    data-target="#navbarTogglerDemo02" 
+                    aria-controls="navbarTogglerDemo02"
+                    aria-expanded="false" 
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.phukethospital.com/">Homepage</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.phukethospital.com/contact/">Contact</a>
+                    </li>
+                    </ul>
+                </div>
+            </div>  
+        </nav>
+    </header>
+    <!-- ======= Header end ======= -->
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex align-items-center">
+        <div class="container position-relative text-center text-lg-left" data-aos="zoom-in" data-aos-delay="100">
+            <div class="row">
+                <div class="col-sm-7">
+                    <h1><span>Speaking Medicine Labels</span></h1>
+                    <h1>Program</h1>
+                    <br>
+                    <h2>หมายเหตุ:Software นี้พัฒนาขึ้นเพื่อเพิ่มความสะดวกสำหรับผู้มีปัญหาทางสายตาหรือกรณีฉลากยาเลือนลาง
+                        <br>
+                        <br>
+                        หากเกิดข้อผิดพลาดจากการออกเสียงขอให้ยึดถือความถูกต้องของข้อความบนฉลากเป็นหลัก</h2>
+                </div>
+                <div class="col-sm-5 d-flex align-items-center justify-content-center" data-aos="zoom-in" data-aos-delay="200">
+                    <a id="btn-scan-qr" class="play-btn" href="#mainplay"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Hero -->
+
+    <!-- ======= main Section ======= -->
+    <section id="mainplay" class="mainplay">
+        <div class="container" data-aos="fade-up">
+            <div class="row">
+                <div class="col-lg-6 d-flex align-items-center justify-content-center" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="about-img">
+                        <img id= getphoto src="" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <style>
+                        .marqueefont{
+                            font-size: 25px;
+                            color: red;
+                        }
+                    </style>
+                    <marquee id="marqueeAllergy" class="marqueefont" direction="left"></marquee>
+
+                    <h2 class="text-center" id="namedrug"></h2>
+                    <span class="border-bottom border-dark"></span>
+                    <nav>
+                        <div class="nav nav-tabs justify-content-center" id="nav-tab" role="tablist">
+                        <a onclick="howtouse()" class="nav-item nav-link active" id="navhowtouse" data-toggle="tab" href="#nav-Howtouse" role="tab" aria-controls="nav-profile" aria-selected="false" >How to use</a>
+                        <a onclick="infosue()" class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" href="#nav-Info" role="tab" aria-controls="nav-home" aria-selected="true">Info</a>
+                        <a onclick="warning()" class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-Warning" role="tab" aria-controls="nav-contact" aria-selected="false">Warning</a>
+                        </div>
+                    </nav>
+                    <div class="tab-content" id="nav-tabContent">
+                        <style>
+                            .linehight{
+                                line-height: 75pt;
+                                font-size: 25px;
+                            }
+                        </style>
+                        <div class="align-self-center tab-pane fade text-center show active linehight" id="nav-Howtouse" role="tabpanel" aria-labelledby="nav-profile-tab"></div>
+
+                        <div class="align-self-center tab-pane fade text-center linehight" id="nav-Info" role="tabpanel" aria-labelledby="nav-home-tab"></div>
+                        
+                        <div class="align-self-center tab-pane fade text-center linehight" id="nav-Warning" role="tabpanel" aria-labelledby="nav-contact-tab"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </div>
+<body>
+    <script src="assets/jquery/dist/jquery.min.js"></script>
+    <script src="assets/bootstrap-4.6.0-dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>  
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=JAMd6mSZ"></script>
+    <script>
+        var howtousevaluelanguage
+        var infovaluelanguage
+        var warningvalelanguage
+        function howtouse(){
+            responsiveVoice.cancel()
+            if(howtousevaluelanguage != "Thailand"){
+            responsiveVoice.setDefaultVoice("US English Female");
+            responsiveVoice.speak(namedungvalue + howtousevalue)
+            }else{
+            responsiveVoice.setDefaultVoice("Thai Female");
+            responsiveVoice.speak(namedungvalue + howtousevalue) 
+            }
+        }
+        function infosue(){
+            responsiveVoice.cancel()
+            if(infovaluelanguage != "Thailand"){
+            responsiveVoice.setDefaultVoice("US English Female");
+            responsiveVoice.speak(infovalue)
+            }else{
+            responsiveVoice.setDefaultVoice("Thai Female");
+            responsiveVoice.speak(infovalue) 
+            }
+        }
+        function warning(){
+            responsiveVoice.cancel()
+            if(warningvalelanguage != "Thailand"){
+            responsiveVoice.setDefaultVoice("US English Female");
+            responsiveVoice.speak(warningvale)
+            }else{
+            responsiveVoice.setDefaultVoice("Thai Female");
+            responsiveVoice.speak(warningvale) 
+            }
+        }
+        
+
+        var howtousevalue
+        var infovalue
+        var warningvale
+        var namedungvalue
+        function showPage(){
+            var marquee = document.getElementById ("marqueeAllergy");
+            marquee.start ();
+            $("#loader").removeAttr("style").hide();
+            document.getElementById('myDiv').style.display = "block";
+        }
+
+        $(document).ready(function() {
+        var myVar2 = setInterval(myTimer2, 6000);
+            function myTimer2(){
+                console.log("-------myTimerTimeOut-------")
+                clearInterval(myVar);
+                clearInterval(myVar2);
+            }
+
+        var myVar = setInterval(myTimer, 300);
+        var checkdata
+        $.ajax({
+                type:"GET",
+                url:"https://bpklabel02-22.web.app/checkdata",
+                //url:"http://localhost:5000/checkdata",
+                dataType:'json',
+                success: function (response) {
+                if(response == ""){
+                    console.log("-----ERROR-----")
+                } else {
+                    checkdata = response["0"].idname
+                }
+            }
+        });
+
+        function myTimer(){
+        $.ajax({
+                type:"GET",
+                url:"https://bpklabel02-22.web.app/data",
+                //url:"http://localhost:5000/data",
+                dataType:'json',
+                success: function (response) {
+                if(response == ""){ 
+                    console.log("-----ERROR-----")
+                } else {
+                    if(response["0"]["0"] == checkdata){
+                        if(response["0"]["5"] != ""){
+                            $("#marqueeAllergy").html(response["0"]["5"]);
+                        }
+                        $("#getphoto").attr("src", response["0"]["8"]);
+                        $("#namedrug").html(response["0"]["4"]);
+                        namedungvalue = response["0"]["4"]
+                        if(response["0"]["1"] != ""){
+                            $("#nav-Howtouse").html(response["0"]["1"]);
+                            howtousevalue = response["0"]["1"]
+                        }
+                        if(response["0"]["2"] != ""){
+                            $("#nav-Info").html(response["0"]["2"]);
+                            infovalue = response["0"]["2"]
+                        }
+                        if(response["0"]["3"] != ""){
+                            $("#nav-Warning").html(response["0"]["3"]);
+                            warningvale = response["0"]["3"]
+                        }
+                        loophowtousevalue()
+                        loopinfovalue()
+                        loopwarningvale()
+                        showPage()
+                        clearInterval(myVar);
+                    }else{
+                        $("#nav-Howtouse").html("ไม่พบข้อมูลฉลากยา");
+                    }
+                }
+            }
+        });
+        }
+        function loophowtousevalue(){
+        for (var y in howtousevalue){
+            if((howtousevalue[y] >= "a" && howtousevalue[y] <= "z") || (howtousevalue[y] >="0" && howtousevalue[y] <="9") || (howtousevalue[y] >="A" && howtousevalue[y] <="Z") || (howtousevalue[y] =="_")
+            || (howtousevalue[y] == " ") || (howtousevalue[y] == ",") || (howtousevalue[y] == ".") || (howtousevalue[y] == "(") || (howtousevalue[y] == ")") || (howtousevalue[y] == "<" )
+            || (howtousevalue[y] == ">" ) || (howtousevalue[y] == "/") ||  (howtousevalue[y] == "&") || (howtousevalue[y] == "-") || (howtousevalue[y] == "+") || (howtousevalue[y] == "=")
+            || (howtousevalue[y] == ":" ) || (howtousevalue[y] == "/")
+            ){
+                console.log("Englisg")
+                howtousevaluelanguage = "English"
+            }else{
+                console.log("Thailand")
+                howtousevaluelanguage = "Thailand"
+                break;
+            }
+            }
+            if(howtousevaluelanguage != "Thailand"){
+            responsiveVoice.setDefaultVoice("US English Female");
+            responsiveVoice.speak(namedungvalue + howtousevalue)
+            }else{
+            responsiveVoice.setDefaultVoice("Thai Female");
+            responsiveVoice.speak(namedungvalue + howtousevalue) 
+            }
+        }
+        function loopinfovalue(){
+        for (var y in infovalue){
+            if((infovalue[y] >= "a" && infovalue[y] <= "z") || (infovalue[y] >="0" && infovalue[y] <="9") || (infovalue[y] >="A" && infovalue[y] <="Z") || (infovalue[y] =="_")
+            || (infovalue[y] == " ") || (infovalue[y] == ",") || (infovalue[y] == ".") || (infovalue[y] == "(") || (infovalue[y] == ")") || (infovalue[y] == "<" )
+            || (infovalue[y] == ">" ) || (infovalue[y] == "/") ||  (infovalue[y] == "&") || (infovalue[y] == "-") || (infovalue[y] == "+") || (infovalue[y] == "=")
+            || (infovalue[y] == ":" ) || (infovalue[y] == "/")
+            ){
+                console.log("Englisg")
+                infovaluelanguage = "English"
+            }else{
+                console.log("Thailand")
+                infovaluelanguage = "Thailand"
+                break;
+            }
+        }
+        }
+        function loopwarningvale(){
+        for (var y in warningvale){
+            if((warningvale[y] >= "a" && warningvale[y] <= "z") || (warningvale[y] >="0" && warningvale[y] <="9") || (warningvale[y] >="A" && warningvale[y] <="Z") || (warningvale[y] =="_")
+            || (warningvale[y] == " ") || (warningvale[y] == ",") || (warningvale[y] == ".") || (warningvale[y] == "(") || (warningvale[y] == ")") || (warningvale[y] == "<" )
+            || (warningvale[y] == ">" ) || (warningvale[y] == "/") ||  (warningvale[y] == "&") || (warningvale[y] == "-") || (warningvale[y] == "+") || (warningvale[y] == "=")
+            || (warningvale[y] == ":" ) || (warningvale[y] == "/")
+            ){
+                console.log("Englisg")
+                warningvalelanguage = "English"
+            }else{
+                console.log("Thailand")
+                warningvalelanguage = "Thailand"
+                break;
+            }
+            }
+        }
+    })
+    </script>
+</body>
+</html>
